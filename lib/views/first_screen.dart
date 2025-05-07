@@ -15,9 +15,8 @@ class FirstScreen extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context); // Vuelve a la pantalla anterior
-          },
+          onPressed: () =>
+              setFirstScreen(true), // Usamos el mismo método de navegación
         ),
       ),
       body: Center(
@@ -31,7 +30,7 @@ class FirstScreen extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               child: const Text('Ir a la segunda pantalla'),
-              onPressed: () => setFirstScreen(false),
+              onPressed: () => setFirstScreen(true),
             ),
           ],
         ),
